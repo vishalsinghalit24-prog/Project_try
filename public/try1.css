@@ -35,41 +35,40 @@ body {
 
 /* = Navbar = */
 nav {
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-}
+      background-color: #004d7a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      /* position: fixed; */
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
 
-nav .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-}
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-nav ul li a,
-.nav-btn {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
+    nav ul li a, .nav-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
 
-nav ul li a:hover,
-.nav-btn:hover {
-  color: var(--secondary-color);
-}
+    nav ul li a:hover, .nav-btn:hover {
+      color: #ff9800;
+    }
 
 /* = Header = */
 header {
@@ -283,7 +282,7 @@ section {
 
 /* = Footer = */
 .footer {
-  background: #c8d3d9;
+  background:#eaf4f9;
   padding-top: 20px;
   padding-left: 20px;
   border-top: 1px solid var(--border-color);

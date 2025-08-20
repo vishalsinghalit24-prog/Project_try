@@ -10,9 +10,15 @@ function switchModal() {
   openModal('registerModal');
 }
 window.onclick = function(e) {
-  ['loginModal', 'registerModal', 'reportModal'].forEach(id => {
+  [ 'reportModal'].forEach(id => {
     const modal = document.getElementById(id);
-    if (modal && e.target === modal) modal.style.display = "none";
+    if (modal  === modal) modal.style.display = "none";
+  });
+}
+window.onclick = function(e) {
+  ['loginModal', 'registerModal'].forEach(id => {
+    const modal = document.getElementById(id);
+    if (e.target == modal) modal.style.display = "none";
   });
 };
 
@@ -131,6 +137,7 @@ window.onload = () => {
   if (username) setUserLoggedIn(username);
   loadLostItems();
 };
+
 
 // Variables for container and modal
 const modal = document.getElementById("reportModal");
