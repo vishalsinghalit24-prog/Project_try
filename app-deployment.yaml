@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lost-and-found-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lost-and-found-app
+  template:
+    metadata:
+      labels:
+        app: lost-and-found-app
+    spec:
+      containers:
+      - name: app
+        image: vishalsinghal07/try-app
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongodb-service:27017/lostandfound"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: lost-and-found-app
+  ports:
+  - port: 3000
+    targetPort: 3000
+  type: ClusterIP
