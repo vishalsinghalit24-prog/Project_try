@@ -61,7 +61,7 @@ pipeline {
             steps {
                 script {
                     echo "📦 Pushing Docker image..."
-                    docker.withRegistry('https://index.docker.io/v1/', 'Docker_Hub') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'DockerHub') {
                         sh """
                             docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
                             docker push ${DOCKER_IMAGE}:latest
