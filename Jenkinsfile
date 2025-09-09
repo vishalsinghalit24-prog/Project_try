@@ -31,15 +31,15 @@ pipeline {
                     echo "🧪 Testing with Docker Compose..."
                     sh """
                         # Clean up existing containers
-                        docker compose down -v
+                        docker-compose down -v
  
                         # Build and start services
-                        docker compose build
-                        docker compose up -d
+                        docker-compose build
+                        docker-compose up -d
  
                         # Wait for services to be ready
                         sleep 30
-                        docker compose ps
+                        docker-compose ps
  
                         # Test application health
                         i=1
@@ -52,7 +52,6 @@ pipeline {
                             i=\$((i+1))
                             sleep 10
                         done
- 
                     """
                 }
             }
