@@ -13,8 +13,8 @@ spec:
         app: lost-and-found-app
     spec:
       containers:
-      - name: lost-and-found-app
-        image: vishalsinghal07/try-app
+      - name: app
+        image: vishalsinghal07/try-app:latest
         ports:
         - containerPort: 3000
         env:
@@ -26,9 +26,10 @@ kind: Service
 metadata:
   name: app-service
 spec:
+  type: LoadBalancer   # ✅ request external IP
   selector:
     app: lost-and-found-app
   ports:
-  - port: 3000
-    targetPort: 3000
-  type: ClusterIP
+    - protocol: TCP
+      port: 80         # external port
+      targetPort: 3000 # internal app port
