@@ -13,7 +13,7 @@ spec:
         app: lost-and-found-app
     spec:
       containers:
-      - name: app
+      - name: lost-and-found-app
         image: vishalsinghal07/try-app:latest
         ports:
         - containerPort: 3000
