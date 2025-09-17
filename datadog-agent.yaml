@@ -5,7 +5,7 @@ metadata:
   namespace: datadog
 spec:
   global:
-    clusterName: vishal-capsule-cluster
+    clusterName: vishal-test-cluster
     site: us1.datadoghq.com
     credentials:
       apiSecret:
